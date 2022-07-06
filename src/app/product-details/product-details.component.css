@@ -19,7 +19,6 @@ img{
   margin: 1rem;
   width: 400px;
   height: 200px;
-  margin-right: 881px;
 }
 
 .details{
@@ -95,6 +94,7 @@ img{
   padding: 1rem;
   border-radius: 10rem;
   outline: none;
+  margin-top: 10px;
 }
 
 .details button:hover{
