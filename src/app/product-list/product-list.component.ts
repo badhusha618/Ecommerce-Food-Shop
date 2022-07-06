@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ProductDetailsService } from '../services/product-details.service';
+import { Food } from '../models/food-item';
 @Component({
   selector: 'app-product-list',
   templateUrl: './product-list.component.html',
@@ -7,13 +8,17 @@ import { ProductDetailsService } from '../services/product-details.service';
 })
 export class ProductListComponent implements OnInit {
 
+  food!: Food;
+
   constructor(
-    private productService: ProductDetailsService,
+    private productDetailService: ProductDetailsService,
   ) { }
 
   ngOnInit(): void {
   }
-product(id : number){
-  this.productService.getAllFoodsById(id)
-}
+
+  product(id : number){
+    this.food = this.productDetailService.getFoodById(id);
+    console.log(this.food);
+  }
 }

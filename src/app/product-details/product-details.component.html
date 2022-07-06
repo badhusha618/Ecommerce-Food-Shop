@@ -2,11 +2,11 @@
 resetLinkText="Back To Homepage"></app-not-found> -->
 
 <div class="container">
-    <img src="https://png.pngitem.com/pimgs/s/219-2190657_transparent-cartoon-pizza-png-pizza-hut-pizza-transparent.png" alt="pizza" />
+    <img src="{{food.imageUrl}}" alt="pizza" />
 
     <div class="details">
         <div class="header">
-            <span class="name">Pizza
+            <span class="name">{{food.name}}
             </span>
             <span class="favorite">
                 ❤
@@ -14,16 +14,16 @@ resetLinkText="Back To Homepage"></app-not-found> -->
         </div>
         <div class="origins">
             <span>
-              Indian Style
+              {{food.origins}}
             </span>
         </div>
         <div class="cook-time">
             <span>
-                Time to cook about <strong>30</strong> minutes
+                Time to cook about <strong>{{food.cookTime}}</strong> minutes
             </span>
         </div>
         <div class="price">
-            <span>200</span>
+            <span>{{food.price}}</span>
         </div>
         <button (click)="addToCart()">Add To Cart</button>
         <button (click)="buynow()">Buy Now</button>

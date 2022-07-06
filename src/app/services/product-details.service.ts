@@ -8,6 +8,10 @@ export class ProductDetailsService {
 
   constructor() { }
 
+  getFoodById(id: number): Food{
+    return this.getAll().find(food => food.id == id)!;
+  }
+
   getAllFoodsById(id: number): Food[] {
     return id == 0 ?
       this.getAll() :
@@ -20,30 +24,39 @@ export class ProductDetailsService {
         id: 1,
         name: 'Pizza',
         price: 10,
+        cookTime: '10-20',
+        origins: ['US'],
         favorite: false,
         stars: 4.5,
         imageUrl: 'https://www.kindpng.com/picc/m/106-1066017_stampede-pizza-pizza-ranch-combo-hd-png-download.png',
+        tags: ['FastFood', 'Pizza', 'Lunch'],
       },
       {
         id: 2,
         name: 'Burger',
         price: 20,
+        cookTime: '15-30',
+        origins: ['US'],
         favorite: true,
         stars: 4.7,
-        imageUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTEKb2k46PpDG56hqO4apYF2iQUZpshRtuk1pmdHtZrUmqjQqk3LlPAr5TV2OpgyLTWOLA&usqp=CAU',
+        imageUrl: 'https://static.onecms.io/wp-content/uploads/sites/9/2021/05/19/urdaburger-FT-RECIPE0621.jpg',
       },
       {
         id: 3,
         name: 'Sandwitch',
         price: 5,
+        cookTime: '20-35',
+        origins: ['italy'],
         favorite: false,
         stars: 3.5,
-        imageUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRWnGlgdLnRINdISZNcwzbgxbsD7RfF1fh3tw&usqp=CAU',
+        imageUrl: 'https://static.toiimg.com/thumb/54714340.cms?imgsize=458099&width=800&height=800',
       },
       {
         id: 4,
         name: 'Sweets',
         price: 2,
+        cookTime: '2',
+        origins: ['Gujarath'],
         favorite: true,
         stars: 3.3,
         imageUrl: 'https://www.pngfind.com/pngs/m/12-122858_free-png-download-sweets-s-png-images-background.png',
@@ -52,9 +65,11 @@ export class ProductDetailsService {
         id: 5,
         name: 'Snacks',
         price: 11,
+        cookTime: '2',
+        origins: ['Tamil Nadu'],
         favorite: false,
         stars: 3.0,
-        imageUrl: 'https://png.pngtree.com/png-vector/20201229/ourlarge/pngtree-breakfast-snack-mcdonald-s-snack-combo-png-image_2665407.jpg',
+        imageUrl: 'https://media.istockphoto.com/photos/group-of-sweet-and-salty-snacks-perfect-for-binge-watching-picture-id1149135424',
       },
     ];
   }
