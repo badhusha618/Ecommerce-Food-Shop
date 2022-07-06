@@ -23,7 +23,7 @@ export class ProductDetailsService {
       {
         id: 1,
         name: 'Pizza',
-        price: 10,
+        price: 200,
         cookTime: '10-20',
         origins: ['US'],
         favorite: false,
@@ -34,7 +34,7 @@ export class ProductDetailsService {
       {
         id: 2,
         name: 'Burger',
-        price: 20,
+        price: 120,
         cookTime: '15-30',
         origins: ['US'],
         favorite: true,
@@ -44,7 +44,7 @@ export class ProductDetailsService {
       {
         id: 3,
         name: 'Sandwitch',
-        price: 5,
+        price: 90,
         cookTime: '20-35',
         origins: ['italy'],
         favorite: false,
@@ -53,8 +53,8 @@ export class ProductDetailsService {
       },
       {
         id: 4,
-        name: 'Sweets',
-        price: 2,
+        name: 'Milk Sweets 1kg',
+        price: 300,
         cookTime: '2',
         origins: ['Gujarath'],
         favorite: true,
@@ -63,8 +63,8 @@ export class ProductDetailsService {
       },
       {
         id: 5,
-        name: 'Snacks',
-        price: 11,
+        name: 'Snacks combo',
+        price: 130,
         cookTime: '2',
         origins: ['Tamil Nadu'],
         favorite: false,
